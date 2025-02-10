@@ -48,7 +48,13 @@ const App = () => {
         ]
         setTours(toursData);
         setLoading(false);
-      },[] )
+      },[] );
+
+      const handleDeleteTour = (id) => {
+        setTours(tours.filter((tour) => tour.id !== id));
+      };
+
+      if (loading) return <Loading />
 
     return(
       <div main id="main" className="container">

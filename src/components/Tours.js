@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import Tour from "./Tour";
 
-const Tours = ({ Tours, onDelete }) => {
+const Tours = ({ tours, onDelete }) => {
   return (
     <div>
-      {Tours.map((tour) => (
+      {tours.map((tour) => (
         <Tour key={tour.id} tour={tour} onDelete={onDelete} />
       ))}
     </div>
   );
-}
+};
 
 export default Tours;
